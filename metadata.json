@@ -1,0 +1,7 @@
+{
+  "name": "VIPERS Performance Lab",
+  "description": "Institutional human engineering and biomechanical performance lab codified on precision, discipline, and physical sovereignty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
