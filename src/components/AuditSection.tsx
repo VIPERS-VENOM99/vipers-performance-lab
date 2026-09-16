@@ -133,6 +133,92 @@ export const AuditSection: React.FC = () => {
           </p>
         </div>
 
+        {/* OPERATIONAL PARAMETERS HUD BLOCK */}
+        <div
+          id="cohort-operational-parameters"
+          className="mb-10 bg-[#080808] border border-white/10 p-6 sm:p-8 relative overflow-hidden"
+        >
+          {/* Corner HUD brackets */}
+          <div className="absolute top-2 left-2 font-mono text-[10px] text-white/30 select-none">
+            [+]
+          </div>
+          <div className="absolute top-2 right-2 font-mono text-[10px] text-white/30 select-none">
+            [+]
+          </div>
+
+          {/* Header */}
+          <div className="flex flex-wrap items-center justify-between pb-4 border-b border-white/10 mb-6 gap-2">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-[#FFC400]" />
+              <h3 className="font-mono text-xs sm:text-sm text-[#FFC400] font-bold tracking-widest uppercase">
+                [ COHORT 01 // OPERATIONAL PARAMETERS ]
+              </h3>
+            </div>
+            <span className="font-mono text-[10px] text-emerald-400 tracking-widest uppercase bg-emerald-950/40 border border-emerald-500/20 px-2 py-0.5 font-medium">
+              SPECIFICATION: VERIFIED
+            </span>
+          </div>
+
+          {/* Parameters Metadata */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 pb-6 border-b border-neutral-900">
+            <div className="bg-black border border-neutral-900 p-4 flex flex-col justify-between">
+              <div className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-1.5">
+                FORMAT:
+              </div>
+              <div className="text-sm font-semibold text-white leading-snug">
+                Remote 1:1 Coaching & Biomechanical Programming
+              </div>
+            </div>
+
+            <div className="bg-black border border-neutral-900 p-4 flex flex-col justify-between">
+              <div className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-1.5">
+                DURATION:
+              </div>
+              <div className="text-sm font-semibold text-white leading-snug">
+                12-Week Intensive <span className="text-neutral-400 text-xs font-normal">(Minimum Commitment)</span>
+              </div>
+            </div>
+
+            <div className="bg-black border border-neutral-900 p-4 border-l-2 border-l-[#FFC400] flex flex-col justify-between">
+              <div className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest mb-1.5">
+                INVESTMENT:
+              </div>
+              <div className="text-sm font-semibold text-[#FFC400] leading-snug">
+                $500 / Month <span className="text-neutral-400 text-xs font-normal block sm:inline mt-0.5 sm:mt-0">(Billed upon evaluation approval)</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Deliverables Section */}
+          <div>
+            <div className="font-mono text-xs text-neutral-400 tracking-wider uppercase mb-3 flex items-center gap-2">
+              <span className="text-[#FFC400] font-bold">&gt;</span>
+              <span className="font-semibold text-white/90">DELIVERABLES:</span>
+            </div>
+            <ul
+              id="cohort-deliverables-list"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 font-mono text-xs sm:text-sm text-neutral-300"
+            >
+              <li className="flex items-start gap-2 bg-black/60 border border-neutral-900 px-3.5 py-2.5">
+                <span className="text-[#FFC400] select-none font-bold mt-0.5">-</span>
+                <span>Custom kinematic resistance programming</span>
+              </li>
+              <li className="flex items-start gap-2 bg-black/60 border border-neutral-900 px-3.5 py-2.5">
+                <span className="text-[#FFC400] select-none font-bold mt-0.5">-</span>
+                <span>Weekly forensic biomechanical film review</span>
+              </li>
+              <li className="flex items-start gap-2 bg-black/60 border border-neutral-900 px-3.5 py-2.5">
+                <span className="text-[#FFC400] select-none font-bold mt-0.5">-</span>
+                <span>Real-time telemetry and metabolic tracking</span>
+              </li>
+              <li className="flex items-start gap-2 bg-black/60 border border-neutral-900 px-3.5 py-2.5">
+                <span className="text-[#FFC400] select-none font-bold mt-0.5">-</span>
+                <span>Direct 1:1 operational oversight from The Architects</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         {/* Interactive Terminal Container */}
         <div
           id="audit-terminal-card"
