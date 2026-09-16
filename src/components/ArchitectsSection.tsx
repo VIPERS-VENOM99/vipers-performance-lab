@@ -5,6 +5,9 @@ interface ArchitectDossier {
   number: string;
   name: string;
   title: string;
+  image: string;
+  imagePosition?: string;
+  recId: string;
   dossier: string;
   mandate: string;
   credentialsBadge: string;
@@ -15,28 +18,35 @@ const ARCHITECTS: ArchitectDossier[] = [
     number: '01',
     name: 'COACH SAM',
     title: 'Founder // Chief Architect',
+    image: 'https://i.postimg.cc/8CwqLhZN/Coach-Sam.jpg',
+    recId: 'REC // ID: VP-01',
     dossier:
-      'Nearly two decades immersed in competitive bodybuilding, applied exercise physiology, endocrinology, and human performance research. NASM-accredited background with continuous specialization across neuromuscular biomechanics and metabolic systems engineering.',
-    mandate: '[ Biomechanical Engineering // Human Performance // System Architecture ]',
+      'Two decades operating at the nexus of physique architecture, applied endocrinology, and clinical exercise physiology. Advanced expertise in metabolic biochemistry, performance pharmacology, and precision macronutrient partitioning aimed at absolute health optimization and sustained cellular durability. Bridges the gap between biomechanical kinetic vectors and sports psychology, engineering unyielding cognitive fortitude alongside physical sovereignty. Governs protocols centered on comprehensive biomarker telemetry, neuro-endocrine recovery, and forensic tension loading.',
+    mandate: '[ Metabolic Biochemistry // Endocrine Health Optimization // Neuro-Cognitive Drive ]',
     credentialsBadge: '20+ YRS PHYSIOLOGY // CHIEF ARCHITECT',
   },
   {
     number: '02',
     name: 'COACH AZIZ',
     title: 'Founding Partner // Master Practitioner',
+    image: 'https://i.postimg.cc/43hWxVj0/Coach-Aziz.jpg',
+    imagePosition: 'center 20%',
+    recId: 'REC // ID: VP-02',
     dossier:
-      'Bachelor of Science in Sports Sciences. Extensive background in competitive physique engineering and high-yield hypertrophy programming. Specializes in resistance curve matching, mechanical tension optimization, and structural mass development.',
-    mandate: '[ Hypertrophy Architecture // Structural Loading // Applied Execution ]',
-    credentialsBadge: 'B.S. SPORTS SCIENCE // HYPERTROPHY ARCHITECT',
+      'Bachelor’s Degree in Sport Coaching (King Saud University) and NASM International Certified Personal Trainer (ICPT) holding an Associate Diploma in Personal Training for Physical Health. Applied conditioning background spanning elite athlete preparation at the Real Madrid Foundation and performance coaching at Leejam Sports Company. Specializes in progressive strength and conditioning architecture, speed and agility mechanics, kinematic movement assessments, and data-driven performance monitoring to build resilient, high-output athletic biology.',
+    mandate: '[ Strength & Conditioning Protocols // Kinetic Movement Audits // Athletic Performance Optimization ]',
+    credentialsBadge: 'B.S. SPORT COACHING // NASM ICPT',
   },
   {
     number: '03',
     name: 'COACH MAHMOUD',
     title: 'Founding Partner // Master Practitioner',
+    image: 'https://i.postimg.cc/FKfBk2JN/Coach-Mahmoud.jpg',
+    recId: 'REC // ID: VP-03',
     dossier:
-      'Bachelor of Science in Sports Sciences. Specialist in kinetic movement patterns, neuromuscular recruitment, and acute central nervous system recovery. Focuses on joint torque stabilization, kinematic trajectory audits, and elite movement mechanics.',
-    mandate: '[ Neuromuscular Protocol // Kinetic Movement Audits // Applied Execution ]',
-    credentialsBadge: 'B.S. SPORTS SCIENCE // KINETIC AUDIT LEAD',
+      'NASM-Certified Personal Trainer (CPT) and Certified Nutrition Coach (CNC) specializing in kinetic resistance mechanics, bioenergetic adaptations, and systemic body composition. Experienced practitioner across premier regional fitness facilities including Fitness Time and World Gym. Focuses on targeted heart-rate zone conditioning, multi-planar movement execution, and precision metabolic nutrition to optimize physical performance and sustained athletic capacity.',
+    mandate: '[ Heart-Rate Zone Conditioning // Kinetic Resistance Mechanics // Precision Nutrition Protocols ]',
+    credentialsBadge: 'NASM CPT & CNC // KINETIC AUDIT LEAD',
   },
 ];
 
@@ -90,6 +100,39 @@ export const ArchitectsSection: React.FC = () => {
                     DOSSIER // {architect.number}
                   </span>
                   <span className="text-neutral-500">OPERATIONAL</span>
+                </div>
+
+                {/* Portrait Image Container */}
+                <div className="aspect-[4/5] relative overflow-hidden border border-white/10 group-hover:border-amber-500/40 transition-colors duration-300 mb-5 bg-black">
+                  {/* Tactical HUD Corner Brackets */}
+                  <div className="absolute top-2 left-2 z-10 font-mono text-xs text-white/40 pointer-events-none select-none">
+                    [+]
+                  </div>
+                  <div className="absolute top-2 right-2 z-10 font-mono text-xs text-white/40 pointer-events-none select-none">
+                    [+]
+                  </div>
+
+                  {/* Coach Portrait Image */}
+                  <img
+                    src={architect.image}
+                    alt={architect.name}
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    style={architect.imagePosition ? { objectPosition: architect.imagePosition } : undefined}
+                    className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out ${
+                      architect.number === '02' ? 'object-[center_20%]' : ''
+                    }`}
+                  />
+
+                  {/* Bottom Bar Overlay */}
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-2.5 pt-6 flex items-center justify-between z-10 pointer-events-none">
+                    <span className="font-mono text-[10px] text-white/50 tracking-widest uppercase">
+                      {architect.recId}
+                    </span>
+                    <span className="font-mono text-[10px] text-emerald-400/80 tracking-widest uppercase font-medium">
+                      STATUS: ACTIVE
+                    </span>
+                  </div>
                 </div>
 
                 {/* Name & Title */}
