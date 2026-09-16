@@ -103,7 +103,7 @@ export const ArchitectsSection: React.FC = () => {
                 </div>
 
                 {/* Portrait Image Container */}
-                <div className="aspect-[4/5] relative overflow-hidden border border-white/10 group-hover:border-amber-500/40 transition-colors duration-300 mb-5 bg-black">
+                <div className="aspect-[4/5] bg-neutral-900 relative overflow-hidden border border-white/10 group-hover:border-amber-500/40 transition-colors duration-300 mb-5">
                   {/* Tactical HUD Corner Brackets */}
                   <div className="absolute top-2 left-2 z-10 font-mono text-xs text-white/40 pointer-events-none select-none">
                     [+]
@@ -117,9 +117,10 @@ export const ArchitectsSection: React.FC = () => {
                     src={architect.image}
                     alt={architect.name}
                     loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     style={architect.imagePosition ? { objectPosition: architect.imagePosition } : undefined}
-                    className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out ${
+                    className={`object-cover w-full h-full opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-out ${
                       architect.number === '02' ? 'object-[center_20%]' : ''
                     }`}
                   />
