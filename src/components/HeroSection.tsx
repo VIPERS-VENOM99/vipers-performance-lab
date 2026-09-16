@@ -60,10 +60,23 @@ export const HeroSection: React.FC = () => {
         {/* Subheadline */}
         <p
           id="hero-subheadline"
-          className="text-xl sm:text-2xl lg:text-3xl text-neutral-300 font-medium max-w-3xl leading-snug mb-6"
+          className="text-xl sm:text-2xl lg:text-3xl text-neutral-300 font-medium max-w-3xl leading-snug mb-4"
         >
           The human vehicle engineered by science. Tempered by discipline. Governed by an uncompromising standard.
         </p>
+
+        {/* Positioning Statement */}
+        <div
+          id="hero-positioning-statement"
+          className="inline-flex flex-col sm:flex-row sm:items-center gap-2 border border-white/10 bg-white/5 px-4 py-2 mt-6 mb-6"
+        >
+          <span className="font-mono text-xs text-white/50 tracking-widest">
+            [ COHORT 01 // SPECIFICATION ]
+          </span>
+          <span className="text-sm text-neutral-300 tracking-wide">
+            Private remote coaching for advanced lifters. Capped at 15 practitioners.
+          </span>
+        </div>
 
         {/* Supporting Statement */}
         <p
@@ -80,7 +93,7 @@ export const HeroSection: React.FC = () => {
             onClick={() => scrollTo('cohort-audit')}
             className="inline-flex items-center justify-center px-8 py-4 bg-[#FFC400] text-black font-mono font-bold text-sm tracking-wider uppercase border border-[#FFC400] hover:bg-white hover:border-white transition-colors duration-200 group shadow-lg shadow-[#FFC400]/10"
           >
-            <span>[ ENTER THE STANDARD ]</span>
+            <span>[ VIEW COHORT 01 PARAMETERS ]</span>
             <CornerDownRight className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:translate-y-0.5 transition-transform" />
           </button>
 
@@ -89,7 +102,7 @@ export const HeroSection: React.FC = () => {
             onClick={() => scrollTo('doctrine')}
             className="inline-flex items-center justify-center px-6 py-4 bg-[#080808] text-neutral-300 font-mono text-sm tracking-wider uppercase border border-neutral-800 hover:border-neutral-700 hover:text-white transition-colors duration-200 group"
           >
-            <span>[ Explore The Doctrine ↓ ]</span>
+            <span>[ READ THE DOCTRINE ↓ ]</span>
             <ArrowDown className="w-4 h-4 ml-2 text-neutral-500 group-hover:text-[#FFC400] group-hover:translate-y-0.5 transition-all" />
           </button>
         </div>
@@ -119,3 +132,4 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
+ 
